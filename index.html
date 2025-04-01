@@ -13,14 +13,64 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-image: url("https://github.com/SCTSupplyChainSolutions/SCTImage/blob/main/SCT%20Logo.jpg?raw=true" );
+            position: relative;
+            background-image: url("https://raw.githubusercontent.com/SCTSupplyChainSolutions/SCTImage/b661589d6d9c675e1f0dd419f329faa67cc9a570/SCT%20Logo.jpg");
             background-size: contain;  /* Logo will maintain aspect ratio */
             background-repeat: no-repeat;
             background-position: center;
         }
+
+        /* Styling for the text container */
+        .text-container {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);  /* Center text vertically */
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+        }
+
+        /* Larger font for the first line of text */
+        .health-check {
+            font-size: 36px;
+            font-weight: 600;
+        }
+
+        /* Smaller font for the second line of text */
+        .instruction-text {
+            font-size: 18px;
+            font-weight: 400;
+        }
+
+        /* Styling for the logo box in the top-right corner */
+        .logoBox {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: white;
+            padding: 10px;
+            z-index: 999;
+        }
+
+        .logo {
+            width: 100px;  /* Resize logo */
+            height: auto;
+        }
     </style>
 </head>
 <body>
+    <!-- Text container with Health Check message -->
+    <div class="text-container">
+        <div class="health-check">Health Check</div>
+        <div class="instruction-text">To view orders, click on the number in each block</div>
+    </div>
+
+    <!-- SCT Logo in the top-right corner -->
+    <div class="logoBox">
+        <img src="https://raw.githubusercontent.com/SCTSupplyChainSolutions/SCTImage/b661589d6d9c675e1f0dd419f329faa67cc9a570/SCT%20Logo.jpg" 
+             alt="SCT Logo" 
+             class="logo">
+    </div>
 </body>
 </html>
 
